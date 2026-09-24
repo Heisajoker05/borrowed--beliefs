@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Borrowed Beliefs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:system-ui;padding:20px;max-width:600px;margin:auto;background:#111;color:#fff}
+button{background:#fff;color:#000;padding:12px 20px;border:0;border-radius:8px;font-weight:bold;margin-top:10px}
+.card{background:#222;padding:20px;border-radius:12px;margin-top:20px}
+</style>
+</head>
+<body>
+<h1>borrowed--beliefs</h1>
+<p>A website for exploring everyday beliefs through Socratic questioning.</p>
+
+<div class="card">
+<h3>Today's Belief:</h3>
+<p>"If my teacher steals my property, I should steal it back"</p>
+<button onclick="start()">Question this belief</button>
+<p id="q"></p>
+</div>
+
+<script>
+const questions=[
+"Does stealing back make it right, or just even?",
+"If everyone did this, what would school look like?",
+"Is there a rule you could live by here?"
+];
+let i=0;
+function start(){
+ if(i<questions.length){
+    document.getElementById('q').innerHTML += "<br><br><b>Q"+(i+1)+":</b> "+questions[i];
+       i++;
+        } else {
+           document.getElementById('q').innerHTML += "<br><br><b>Your rule:</b> Write your own rule below.";
+            }
+            }
+            </script>
+            </body>
+            </html>
